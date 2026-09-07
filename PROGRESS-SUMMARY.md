@@ -23,7 +23,7 @@ joining **Infosys on 21 September 2026**:
 
 | Topic | Status | Notes |
 |---|---|---|
-| Git | Not started | Folder ready at `Project Data Analytics/Git` |
+| Git | In progress | `Git/gh-cli-commands.md` — reference notes on `gh auth`/`repo list`/`repo delete`/`auth refresh`/`logout`/`login`, written by the user himself while cleaning up his GitHub account |
 | Python | Has prior practice | `Project Data Analytics/Python/Practice.ipynb` carried over from before this project started |
 | Pandas | Not started | Folder ready |
 | NumPy | Not started | Folder ready |
@@ -31,28 +31,28 @@ joining **Infosys on 21 September 2026**:
 | Power BI | Not started | Folder ready |
 | SQL | Already strong | No dedicated folder planned; light refreshers only if needed |
 
-## Environment / tooling status
+## Environment / tooling status — all done
 
 - GitHub CLI (`gh`) installed and authenticated as **premkumar3965**.
-- Claude Code CLI install is mid-troubleshooting (installed via Claude
-  Desktop's sandboxed terminal, not yet reachable from a normal terminal —
-  full detail in `General/2026-09-07.md`).
-- This folder is connected to GitHub repo
+- Claude Code CLI (`claude`) installed and working from a normal terminal
+  (the earlier sandboxing issue is resolved — reinstalled directly by the
+  user in his own terminal).
+- GitHub account cleaned up: 5 old repos deleted, only
   **[premkumar3965/Data-Analytics](https://github.com/premkumar3965/Data-Analytics)**
-  (reused the existing repo rather than creating a new one). Its old
-  Coursera test files (`Child_Branch_Test_File.py`, `Test.py`, the old
-  `README.md`) were removed and replaced with this project's structure —
-  the old history is still there in the repo if it's ever needed.
-- `git init` done, `origin` set, first commit pushed to `main`.
+  remains.
+- This folder is connected to that repo (reused rather than creating a new
+  one). Old Coursera test files were removed and replaced with this
+  project's structure — old history is still there if ever needed.
+  `git init` done, `origin` set, multiple commits pushed to `main`.
+- `CLAUDE.md` session-start instructions in place at both `E:\Learnings\`
+  and this folder — new sessions auto-identify machine + interface and
+  resume from this file.
 
-## What to do next (short version — full detail in General/ if needed)
+## What to do next
 
-1. Finish getting `claude` working in a normal (non-sandboxed) terminal —
-   reinstall with `npm install -g @anthropic-ai/claude-code` run directly
-   in your own terminal.
-2. Start actual topic work — Git refresher first (since it's the daily
-   habit-forming piece), then Python refresher, then Pandas/NumPy/
-   Matplotlib/Power BI in whatever order feels right.
+Start actual topic work — Git refresher first (already underway via
+`Git/gh-cli-commands.md`), then Python refresher, then Pandas/NumPy/
+Matplotlib/Power BI in whatever order feels right.
 
 ## How this file should be maintained
 
