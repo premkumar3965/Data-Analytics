@@ -1,0 +1,4 @@
+relationship Orders-Date
+	fromColumn: Orders.'Order Date'
+	toColumn: Date.Date
+

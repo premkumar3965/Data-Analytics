@@ -1,0 +1,39 @@
+table Date
+	dataCategory: Time
+
+	column Date
+		isNameInferred
+		sourceColumn: [Date]
+
+	column Year
+		isNameInferred
+		sourceColumn: [Year]
+
+	column 'Month Number'
+		isNameInferred
+		sourceColumn: [Month Number]
+
+	column 'Month Name'
+		isNameInferred
+		sourceColumn: [Month Name]
+
+	column Quarter
+		isNameInferred
+		sourceColumn: [Quarter]
+
+	column Year-Month
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+	partition Date-Partition = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDARAUTO(),
+				    "Year", YEAR([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date],"MMMM"),
+				    "Quarter", "Q" & FORMAT([Date],"Q"),
+				    "Year-Month", FORMAT([Date],"MMM YYYY")
+				)
+

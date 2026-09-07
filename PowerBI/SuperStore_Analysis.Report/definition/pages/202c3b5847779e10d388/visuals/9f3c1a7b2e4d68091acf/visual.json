@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "9f3c1a7b2e4d68091acf",
+  "position": { "x": 260, "y": 98, "z": 0, "width": 1640, "height": 140, "tabOrder": 0 },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "Orders" } }, "Property": "Total Sales" } },
+              "queryRef": "Orders.Total Sales",
+              "nativeQueryRef": "Total Sales"
+            },
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "Orders" } }, "Property": "Total Profit" } },
+              "queryRef": "Orders.Total Profit",
+              "nativeQueryRef": "Total Profit"
+            },
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "Orders" } }, "Property": "Profit Margin %" } },
+              "queryRef": "Orders.Profit Margin %",
+              "nativeQueryRef": "Profit Margin %"
+            },
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "Orders" } }, "Property": "Total Orders" } },
+              "queryRef": "Orders.Total Orders",
+              "nativeQueryRef": "Total Orders"
+            },
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "Orders" } }, "Property": "Sales YoY %" } },
+              "queryRef": "Orders.Sales YoY %",
+              "nativeQueryRef": "Sales YoY %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "value": [{
+        "properties": {
+          "fontSize": { "expr": { "Literal": { "Value": "30D" } } },
+          "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#3B0764'" } } } } },
+          "bold": { "expr": { "Literal": { "Value": "true" } } }
+        },
+        "selector": { "id": "default" }
+      }],
+      "label": [{
+        "properties": {
+          "show": { "expr": { "Literal": { "Value": "true" } } },
+          "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#7C3AED'" } } } } },
+          "fontSize": { "expr": { "Literal": { "Value": "12D" } } }
+        },
+        "selector": { "id": "default" }
+      }],
+      "outline": [{
+        "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } },
+        "selector": { "id": "default" }
+      }],
+      "accentBar": [{
+        "properties": {
+          "show": { "expr": { "Literal": { "Value": "true" } } },
+          "position": { "expr": { "Literal": { "Value": "'Left'" } } },
+          "width": { "expr": { "Literal": { "Value": "4D" } } },
+          "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#A855F7'" } } } } }
+        },
+        "selector": { "id": "default" }
+      }],
+      "cardCalloutArea": [{
+        "properties": {
+          "show": { "expr": { "Literal": { "Value": "true" } } },
+          "paddingUniform": { "expr": { "Literal": { "Value": "12L" } } },
+          "rectangleRoundedCurve": { "expr": { "Literal": { "Value": "10L" } } },
+          "backgroundFillColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } },
+          "backgroundTransparency": { "expr": { "Literal": { "Value": "0D" } } }
+        }
+      }]
+    },
+    "visualContainerObjects": {
+      "title": [{ "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } } }],
+      "subTitle": [{ "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } } }],
+      "background": [{ "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } } }],
+      "border": [{ "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } } }],
+      "visualHeader": [{ "properties": { "show": { "expr": { "Literal": { "Value": "false" } } } } }],
+      "padding": [{
+        "properties": {
+          "top": { "expr": { "Literal": { "Value": "8D" } } },
+          "bottom": { "expr": { "Literal": { "Value": "8D" } } },
+          "left": { "expr": { "Literal": { "Value": "8D" } } },
+          "right": { "expr": { "Literal": { "Value": "8D" } } }
+        }
+      }]
+    }
+  }
+}

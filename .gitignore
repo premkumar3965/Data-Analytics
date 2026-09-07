@@ -10,3 +10,7 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Power BI (.pbip projects) - local-only cache/binary/editor-state, not shared source
+*.pbix
+**/.pbi/

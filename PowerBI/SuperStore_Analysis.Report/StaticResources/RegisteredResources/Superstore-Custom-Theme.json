@@ -1,0 +1,31 @@
+{
+  "name": "Superstore Custom Theme",
+  "dataColors": [
+    "#A855F7",
+    "#6366F1",
+    "#EC4899",
+    "#D946EF",
+    "#8B5CF6",
+    "#F59E0B",
+    "#14B8A6",
+    "#F472B6"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#0b0b0b",
+  "foregroundNeutralSecondary": "#52514e",
+  "foregroundNeutralTertiary": "#898781",
+  "foregroundNeutralLight": "#c3c2b7",
+  "backgroundLight": "#f9f9f7",
+  "backgroundNeutral": "#e1e0d9",
+  "backgroundDark": "#c3c2b7",
+  "secondaryBackground": "#f9f9f7",
+  "tableAccent": "#A855F7",
+  "accent": "#A855F7",
+  "shapeStroke": "#e1e0d9",
+  "disabledText": "#c3c2b7",
+  "good": "#0ca30c",
+  "neutral": "#fab219",
+  "bad": "#d03b3b",
+  "hyperlink": "#A855F7",
+  "visitedHyperlink": "#6366F1"
+}

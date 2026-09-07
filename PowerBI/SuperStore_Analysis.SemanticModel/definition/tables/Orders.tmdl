@@ -1,0 +1,119 @@
+table Orders
+
+	measure 'Total Sales' = SUM(Orders[Sales])
+
+	measure 'Total Profit' = SUM(Orders[Profit])
+
+	measure 'Profit Margin %' = DIVIDE([Total Profit], [Total Sales])
+
+	measure 'Total Orders' = DISTINCTCOUNT(Orders[Order ID])
+
+	measure 'Total Quantity' = SUM(Orders[Quantity])
+
+	measure 'Average Discount' = AVERAGE(Orders[Discount])
+
+	measure 'Sales PY' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
+
+	measure 'Sales YoY %' = DIVIDE([Total Sales] - [Sales PY], [Sales PY])
+
+	column 'Row ID'
+		dataType: int64
+		sourceColumn: Row ID
+
+	column 'Order ID'
+		dataType: string
+		sourceColumn: Order ID
+
+	column 'Order Date'
+		dataType: dateTime
+		sourceColumn: Order Date
+
+	column 'Ship Date'
+		dataType: dateTime
+		sourceColumn: Ship Date
+
+	column 'Ship Mode'
+		dataType: string
+		sourceColumn: Ship Mode
+
+	column 'Customer ID'
+		dataType: string
+		sourceColumn: Customer ID
+
+	column 'Customer Name'
+		dataType: string
+		sourceColumn: Customer Name
+
+	column Segment
+		dataType: string
+		sourceColumn: Segment
+
+	column Country
+		dataType: string
+		sourceColumn: Country
+
+	column City
+		dataType: string
+		sourceColumn: City
+
+	column State
+		dataType: string
+		sourceColumn: State
+
+	column 'Postal Code'
+		dataType: int64
+		sourceColumn: Postal Code
+
+	column Region
+		dataType: string
+		sourceColumn: Region
+
+	column 'Product ID'
+		dataType: string
+		sourceColumn: Product ID
+
+	column Category
+		dataType: string
+		sourceColumn: Category
+
+	column Sub-Category
+		dataType: string
+		sourceColumn: Sub-Category
+
+	column 'Product Name'
+		dataType: string
+		sourceColumn: Product Name
+
+	column Sales
+		dataType: double
+		sourceColumn: Sales
+
+	column Quantity
+		dataType: int64
+		sourceColumn: Quantity
+
+	column Discount
+		dataType: double
+		sourceColumn: Discount
+
+	column Profit
+		dataType: double
+		sourceColumn: Profit
+
+	partition Orders-Partition = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Learnings\Dataset\Sample - Superstore.csv"), [Delimiter=",", Columns=21, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+				    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    ChangedType = Table.TransformColumnTypes(PromotedHeaders, {
+				        {"Row ID", Int64.Type}, {"Order ID", type text}, {"Order Date", type date}, {"Ship Date", type date},
+				        {"Ship Mode", type text}, {"Customer ID", type text}, {"Customer Name", type text}, {"Segment", type text},
+				        {"Country", type text}, {"City", type text}, {"State", type text}, {"Postal Code", Int64.Type},
+				        {"Region", type text}, {"Product ID", type text}, {"Category", type text}, {"Sub-Category", type text},
+				        {"Product Name", type text}, {"Sales", type number}, {"Quantity", Int64.Type}, {"Discount", type number},
+				        {"Profit", type number}
+				    }, "en-US")
+				in
+				    ChangedType
+
