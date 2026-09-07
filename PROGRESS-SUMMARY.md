@@ -36,20 +36,21 @@ joining **Infosys on 21 September 2026**:
 - GitHub CLI (`gh`) installed and authenticated as **premkumar3965**.
 - Claude Code CLI install is mid-troubleshooting (installed via Claude
   Desktop's sandboxed terminal, not yet reachable from a normal terminal —
-  full detail in `General/2026-09-07 - Environment Setup/`).
-- No GitHub repo created yet for this project — decision pending on
-  whether to reuse the existing `Data-Analytics` repo on GitHub or create a
-  new one.
-- No `git init` done yet in this local folder.
+  full detail in `General/2026-09-07.md`).
+- This folder is connected to GitHub repo
+  **[premkumar3965/Data-Analytics](https://github.com/premkumar3965/Data-Analytics)**
+  (reused the existing repo rather than creating a new one). Its old
+  Coursera test files (`Child_Branch_Test_File.py`, `Test.py`, the old
+  `README.md`) were removed and replaced with this project's structure —
+  the old history is still there in the repo if it's ever needed.
+- `git init` done, `origin` set, first commit pushed to `main`.
 
 ## What to do next (short version — full detail in General/ if needed)
 
-1. Finish getting `claude` working in a normal (non-sandboxed) terminal.
-2. Decide: reuse GitHub's existing `Data-Analytics` repo, or create a new
-   one for this project.
-3. `git init` this folder (or clone the chosen repo into it) and make the
-   first commit.
-4. Start actual topic work — Git refresher first (since it's the daily
+1. Finish getting `claude` working in a normal (non-sandboxed) terminal —
+   reinstall with `npm install -g @anthropic-ai/claude-code` run directly
+   in your own terminal.
+2. Start actual topic work — Git refresher first (since it's the daily
    habit-forming piece), then Python refresher, then Pandas/NumPy/
    Matplotlib/Power BI in whatever order feels right.
 
